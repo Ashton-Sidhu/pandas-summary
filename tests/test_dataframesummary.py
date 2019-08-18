@@ -171,7 +171,7 @@ class DataFrameSummaryTest(unittest.TestCase):
                              name='dbool1',
                              dtype=object).sort_index()
 
-        assert_series_equal(self.dfs['dbool1'], expected)
+        assert_series_equal(self.dfs['dbool1'].sort_index(), expected)
 
     def test_bool2_summary(self):
         count_values = self.df['dbool2'].value_counts()
